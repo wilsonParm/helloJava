@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RadioActivity">
+
+    <RadioGroup
+        android:id="@+id/rb_00"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:padding="15sp">
+
+        <TextView
+            android:id="@+id/rbtest_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="选择性别"
+            android:textSize="30dp"/>
+
+        <RadioButton
+            android:id="@+id/rb_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="男"
+            android:checked="true"
+            android:textSize="25dp"
+            android:textColor="#1E90FF"
+
+            />
+        <RadioButton
+            android:id="@+id/rb_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="女"
+            android:textSize="25dp"
+            android:textColor="#FFA07A"
+            />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rb_10"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@id/rb_00"
+        android:layout_marginTop="-1dp"
+        android:padding="15sp">
+
+        <TextView
+            android:id="@+id/rbtest_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="选择性别"
+            android:textSize="30dp" />
+
+        <RadioButton
+            android:id="@+id/rb_11"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radio_select"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="男"
+            android:textColor="#1E90FF"
+            android:textSize="25dp"
+
+            />
+
+        <RadioButton
+            android:id="@+id/rb_12"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radio_select"
+            android:button="@null"
+            android:gravity="center"
+            android:text="女"
+            android:textColor="#FFA07A"
+            android:textSize="25dp" />
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/cb_01"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/rb_10"
+        android:text="持有的设备"
+        android:textSize="30dp"/>
+    <CheckBox
+        android:id="@+id/cb_02"
+        android:layout_margin="5dp"
+        android:layout_below="@id/cb_01"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Android"
+        android:textSize="20dp"/>
+    <CheckBox
+        android:id="@+id/cb_03"
+        android:layout_margin="5dp"
+        android:layout_below="@id/cb_02"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="IOS"
+        android:textSize="20dp"/>
+    <CheckBox
+        android:id="@+id/cb_04"
+        android:layout_margin="5dp"
+        android:layout_below="@id/cb_03"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="PC"
+        android:textSize="20dp"/>
+    <CheckBox
+        android:id="@+id/cb_05"
+        android:layout_margin="5dp"
+        android:layout_below="@id/cb_04"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="其他"
+        android:textSize="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/cb_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/cb_05">
+        <TextView
+            android:id="@+id/cb_11"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="你的兴趣"
+            android:textSize="30dp"/>
+        <CheckBox
+            android:id="@+id/cb_12"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="play computer"
+            android:textSize="20dp"/>
+        <CheckBox
+            android:id="@+id/cb_13"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="吃饭"
+            android:textSize="20dp"/>
+        <CheckBox
+            android:id="@+id/cb_14"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="睡觉"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

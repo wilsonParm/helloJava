@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:cont1ext=".BasicLog"
+    android:padding="20dp">
+
+
+    <EditText
+        android:id="@+id/call"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="电话"
+        android:paddingLeft="20dp"
+        android:background="@drawable/lognum"
+        android:layout_margin="20dp"
+        android:maxLines="1"
+        android:inputType="number"/>
+
+
+    <EditText
+        android:layout_below="@id/call"
+        android:id="@+id/logAcount"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="账号"
+        android:paddingLeft="20dp"
+        android:background="@drawable/lognum"
+        android:layout_margin="20dp"/>
+
+    <EditText
+        android:id="@+id/LogPassword"
+        android:layout_below="@id/logAcount"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="密码"
+        android:paddingLeft="20dp"
+        android:background="@drawable/lognum"
+        android:layout_margin="20dp"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:layout_below="@id/LogPassword"
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="20dp"
+        android:text="登录"
+        android:onClick="ShowToast"
+        android:background="@drawable/btn_click"/>
+
+    <Button
+        android:id="@+id/BtnLogBack"
+        android:layout_below="@id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/btn_n7"
+        android:text="BackToMain" />
+</RelativeLayout>
