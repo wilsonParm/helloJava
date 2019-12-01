@@ -6,7 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.helloworld.GridView.ListviewActivity;
+
 import static com.example.helloworld.R.id.BtnToImage;
+import static com.example.helloworld.R.id.BtnToListview;
 
 public class MainActivity extends AppCompatActivity {
     private Button mBtnTextView;
@@ -14,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private Button BtnLogView;
     private Button BtnRadio;
     private Button BtnImage;
+    private Button mBtnListview;
 
 
     @Override
@@ -25,16 +29,19 @@ public class MainActivity extends AppCompatActivity {
         BtnLogView = this.<Button>findViewById(R.id.BtnToLogView);
         BtnRadio = this.<Button>findViewById(R.id.BtnToRadio);
         BtnImage = this.findViewById(BtnToImage);
+        mBtnListview = this.findViewById(BtnToListview);
         setListeners();
     }
 
     private void setListeners(){
         Onclick onclick = new Onclick();
-        mBtnTextView.setOnClickListener(onclick);
+        mBtnTextView.setOnClickListener(onclick);//设置了点击事件点击后跳转到onclick
         BtnClass.setOnClickListener(onclick);
         BtnLogView.setOnClickListener(onclick);
         BtnRadio.setOnClickListener(onclick);
         BtnImage.setOnClickListener(onclick);
+        mBtnListview.setOnClickListener(onclick);
+
     }
 
     private class Onclick implements View.OnClickListener{
@@ -55,8 +62,11 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.BtnToRadio:
                     intent = new Intent(MainActivity.this, RadioActivity.class);
                     break;
-                case BtnToImage:
+                case R.id.BtnToImage:
                     intent = new Intent(MainActivity.this, ImageActivity.class);
+                    break;
+                case R.id.BtnToListview:
+                    intent = new Intent(MainActivity.this, ListviewActivity.class);
                     break;
 
             }

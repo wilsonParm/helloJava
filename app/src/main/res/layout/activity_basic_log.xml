@@ -42,14 +42,14 @@
         android:inputType="textPassword"/>
 
     <Button
-        android:layout_below="@id/LogPassword"
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_margin="20dp"
         android:text="登录"
         android:onClick="ShowToast"
-        android:background="@drawable/btn_click"/>
+        android:background="@drawable/btn_click"
+        android:layout_below="@id/LogPassword"/>
 
     <Button
         android:id="@+id/BtnLogBack"

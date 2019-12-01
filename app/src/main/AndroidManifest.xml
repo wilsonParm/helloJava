@@ -16,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RadioActivity"></activity>
+        <activity android:name=".GridView.ListviewActivity"></activity>
+        <activity android:name=".RadioActivity" />
         <activity android:name=".BtnClassPage" />
         <activity android:name=".BasicLog" />
         <activity android:name=".TextViewActivity" />
