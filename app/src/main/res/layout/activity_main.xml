@@ -67,6 +67,6 @@
             android:id="@+id/BtnToListview"
             android:layout_toRightOf="@id/BtnToImage"
             android:background="@drawable/btn_n7"
-            android:text="BtnToImage"/>
+            android:text="listView"/>
     </RelativeLayout>
 </LinearLayout>

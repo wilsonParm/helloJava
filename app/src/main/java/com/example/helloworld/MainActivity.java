@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.helloworld.GridView.ListviewActivity;
+import com.example.helloworld.listView.ListViewActivity;
 
 import static com.example.helloworld.R.id.BtnToImage;
 import static com.example.helloworld.R.id.BtnToListview;
@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
         BtnClass = this.<Button>findViewById(R.id.BtnToClass);
         BtnLogView = this.<Button>findViewById(R.id.BtnToLogView);
         BtnRadio = this.<Button>findViewById(R.id.BtnToRadio);
-        BtnImage = this.findViewById(BtnToImage);
-        mBtnListview = this.findViewById(BtnToListview);
+        BtnImage = this.<Button>findViewById(BtnToImage);
+        mBtnListview = this.<Button>findViewById(BtnToListview);
         setListeners();
     }
 
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                     intent = new Intent(MainActivity.this, ImageActivity.class);
                     break;
                 case R.id.BtnToListview:
-                    intent = new Intent(MainActivity.this, ListviewActivity.class);
+                    intent = new Intent(MainActivity.this, ListViewActivity.class);
                     break;
 
             }

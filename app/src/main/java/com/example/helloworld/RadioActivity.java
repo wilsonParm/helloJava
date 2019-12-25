@@ -61,6 +61,7 @@ public class RadioActivity extends AppCompatActivity {
     }
 
     private OnCheckedChangeListener listener = new OnCheckedChangeListener() {
+        @SuppressLint("WrongConstant")
         @Override
         public void onCheckedChanged(CompoundButton buttonView,
                                      boolean isChecked) {
