@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.helloworld.gridview.GridViewActivity;
 import com.example.helloworld.listView.ListViewActivity;
 
+import static com.example.helloworld.R.id.BtnToGridView;
 import static com.example.helloworld.R.id.BtnToImage;
 import static com.example.helloworld.R.id.BtnToListview;
 
@@ -18,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private Button BtnRadio;
     private Button BtnImage;
     private Button mBtnListview;
+    private Button mBtnGridView;
 
 
     @Override
@@ -30,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         BtnRadio = this.<Button>findViewById(R.id.BtnToRadio);
         BtnImage = this.<Button>findViewById(BtnToImage);
         mBtnListview = this.<Button>findViewById(BtnToListview);
+        mBtnGridView = this.<Button>findViewById(BtnToGridView);
         setListeners();
     }
 
@@ -41,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         BtnRadio.setOnClickListener(onclick);
         BtnImage.setOnClickListener(onclick);
         mBtnListview.setOnClickListener(onclick);
+        mBtnGridView.setOnClickListener(onclick);
 
     }
 
@@ -68,6 +73,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.BtnToListview:
                     intent = new Intent(MainActivity.this, ListViewActivity.class);
+                    break;
+                case R.id.BtnToGridView:
+                    intent = new Intent(MainActivity.this, GridViewActivity.class);
                     break;
 
             }

@@ -2,11 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <ListView
-        android:id="@+id/lv_1"
+    <GridView
+        android:id="@+id/gv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:divider="@color/colorWhite"
-        android:listSelector="@drawable/list_item"
-        />
+        android:numColumns="2"
+        android:verticalSpacing="30dp"/>
 </LinearLayout>
