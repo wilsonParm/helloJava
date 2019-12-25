@@ -1,7 +1,7 @@
 package com.example.helloworld;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -54,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
                     intent = new Intent(MainActivity.this, TextViewActivity.class);
                     break;
                 case R.id.BtnToClass:
-                    intent = new Intent(MainActivity.this, BtnClassPage.class);
+                    intent = new Intent(MainActivity.this, BasicLog.class);
+//                    intent = new Intent(MainActivity.this, BtnClassPage.class);
                     break;
                 case R.id.BtnToLogView:
                     intent = new Intent(MainActivity.this, BasicLog.class);

@@ -1,46 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ImageActivity"
-    android:orientation="vertical"
     android:padding="10dp">
 
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:background="#F2AF85"
-        android:src="@mipmap/imageview01"
-        android:scaleType="fitXY"
-        android:layout_margin="10dp"
-        />
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:id="@+id/image01"
-        android:background="#F2AF85"
-        android:src="@mipmap/imageview01"
-        android:scaleType="centerCrop"
-        android:layout_margin="10dp"
-        />
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:id="@+id/image02"
-        android:background="#F2AF85"
-        android:src="@mipmap/imageview01"
-        android:scaleType="fitCenter"
-        android:layout_margin="10dp"
-        />
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:id="@+id/image03"
-        android:background="#FFFF85"
-        android:src="@mipmap/imageview01"
-        android:scaleType="fitCenter"
-        android:layout_margin="10dp"
-        />
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="#F2AF85"
+            android:src="@mipmap/imageview01"
+            android:scaleType="fitXY"
+            android:layout_margin="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/image01"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"
+            android:background="#F2AF85"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/imageview01" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/image02"
+            android:background="#F2AF85"
+            android:src="@mipmap/imageview01"
+            android:scaleType="fitCenter"
+            android:layout_margin="10dp"
+            />
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/image03"
+            android:background="#FFFF85"
+            android:src="@mipmap/imageview01"
+            android:scaleType="fitCenter"
+            android:layout_margin="10dp"
+            />
+    </LinearLayout>
+</ScrollView>

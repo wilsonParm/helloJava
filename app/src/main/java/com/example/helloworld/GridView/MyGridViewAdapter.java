@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.helloworld.R;
 
 public class MyGridViewAdapter extends BaseAdapter {
@@ -48,7 +49,7 @@ public class MyGridViewAdapter extends BaseAdapter {
         }
         //赋值
         holder.textView.setText("西瓜");
-//        Glide.with(mContext).load("http://imgsrc.baidu.com/forum/w%3D580/sign=54a7e691b0a1cd1105b672288913c8b0/447ca71ea8d3fd1fed4fa09b3a4e251f97ca5fc0.jpg");
+        Glide.with(mContext).load("http://imgsrc.baidu.com/forum/w%3D580/sign=54a7e691b0a1cd1105b672288913c8b0/447ca71ea8d3fd1fed4fa09b3a4e251f97ca5fc0.jpg");
 
 
 
