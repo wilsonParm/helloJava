@@ -2,12 +2,15 @@ package com.example.helloworld;
 
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import com.example.helloworld.gridview.GridViewActivity;
 import com.example.helloworld.listView.ListViewActivity;
+import com.example.helloworld.recyclerview.RecyclerViewActivity;
 
 import static com.example.helloworld.R.id.BtnToGridView;
 import static com.example.helloworld.R.id.BtnToImage;
@@ -21,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private Button BtnImage;
     private Button mBtnListview;
     private Button mBtnGridView;
+    private Button mRv;
 
 
     @Override
@@ -31,9 +35,10 @@ public class MainActivity extends AppCompatActivity {
         BtnClass = this.<Button>findViewById(R.id.BtnToClass);
         BtnLogView = this.<Button>findViewById(R.id.BtnToLogView);
         BtnRadio = this.<Button>findViewById(R.id.BtnToRadio);
-        BtnImage = this.<Button>findViewById(BtnToImage);
-        mBtnListview = this.<Button>findViewById(BtnToListview);
-        mBtnGridView = this.<Button>findViewById(BtnToGridView);
+        BtnImage = this.<Button>findViewById(R.id.BtnToImage);
+        mBtnListview = this.<Button>findViewById(R.id.BtnToListview);
+        mBtnGridView = this.<Button>findViewById(R.id.BtnToGridView);
+        mRv = this.<Button>findViewById(R.id.btnToRecyclerView);
         setListeners();
     }
 
@@ -46,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         BtnImage.setOnClickListener(onclick);
         mBtnListview.setOnClickListener(onclick);
         mBtnGridView.setOnClickListener(onclick);
+        mRv.setOnClickListener(onclick);
 
     }
 
@@ -76,6 +82,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.BtnToGridView:
                     intent = new Intent(MainActivity.this, GridViewActivity.class);
+                    break;
+                case R.id.btnToRecyclerView:
+                    intent = new Intent(MainActivity.this, RecyclerViewActivity.class);
                     break;
 
             }

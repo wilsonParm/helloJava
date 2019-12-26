@@ -71,13 +71,34 @@
             android:text="listView"/>
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/BtnToGridView"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@drawable/btn_n7"
-        android:textSize="20dp"
-        android:text="GridView"
-        tools:ignore="DuplicateIds" />
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:id="@+id/BtnToGridView"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_n7"
+            android:text="GridView"/>
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:layout_toRightOf="@id/BtnToGridView"
+            android:id="@+id/btnToRecyclerView"
+            android:background="@drawable/btn_red"
+            android:layout_marginTop="20dp"
+            android:text="recyclerView"/>
+<!--        <Button-->
+<!--            android:layout_width="110dp"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:layout_margin="20dp"-->
+<!--            android:id="@+id/BtnToListview11"-->
+<!--            android:layout_toRightOf="@id/btnToRecyclerView"-->
+<!--            android:background="@drawable/btn_n7"-->
+<!--            android:text="listView"/>-->
+    </RelativeLayout>
 
 </LinearLayout>
