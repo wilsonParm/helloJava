@@ -16,7 +16,7 @@ import com.example.helloworld.R;
 
 public class RecyclerViewActivity extends AppCompatActivity {
 
-    private Button mBtnLinera;
+    private Button mBtnLinera, mBtnGrid;
     private Button mBtnHor;
 
     @Override
@@ -38,6 +38,14 @@ public class RecyclerViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RecyclerViewActivity.this,HorRecyclerViewActivity.class);
+                startActivity(intent);
+            }
+        });
+        mBtnGrid = this.<Button>findViewById(R.id.btn_grid);
+        mBtnGrid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RecyclerViewActivity.this,GridRecyclerViewActivity.class);
                 startActivity(intent);
             }
         });
