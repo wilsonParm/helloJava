@@ -4,23 +4,21 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.helloworld.R;
 
-public class LineraAdapter extends RecyclerView.Adapter<LineraAdapter.LinearViewHolder> {
+public class HorAdapter extends RecyclerView.Adapter<HorAdapter.LinearViewHolder> {
 
     private Context mContext;
     private OnItemClickListener mlistener;
     private OnItemLongClickListener mLlistener;
 
 
-    public LineraAdapter(Context context, OnItemClickListener listener, OnItemLongClickListener Llistener){
+    public HorAdapter(Context context, OnItemClickListener listener, OnItemLongClickListener Llistener){
 
         this.mContext = context;
         this.mlistener = listener;
@@ -28,14 +26,14 @@ public class LineraAdapter extends RecyclerView.Adapter<LineraAdapter.LinearView
     }
 
     @Override
-    public LineraAdapter.LinearViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public HorAdapter.LinearViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        return new LinearViewHolder(LayoutInflater.from(mContext).inflate(R.layout.layout_linear_item, parent,false));
+        return new LinearViewHolder(LayoutInflater.from(mContext).inflate(R.layout.layout_hor_item, parent,false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull LineraAdapter.LinearViewHolder holder, final int position) {
-        holder.textView.setText("hello World");
+    public void onBindViewHolder(@NonNull HorAdapter.LinearViewHolder holder, final int position) {
+        holder.textView.setText("hello");
         holder.itemView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

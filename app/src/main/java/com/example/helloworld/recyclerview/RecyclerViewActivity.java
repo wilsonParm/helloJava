@@ -17,13 +17,14 @@ import com.example.helloworld.R;
 public class RecyclerViewActivity extends AppCompatActivity {
 
     private Button mBtnLinera;
+    private Button mBtnHor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view);
 
-        mBtnLinera = findViewById(R.id.btn_linear);
+        mBtnLinera = this.<Button>findViewById(R.id.btn_linear);
         mBtnLinera.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -31,6 +32,16 @@ public class RecyclerViewActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         }));
+
+        mBtnHor = this.<Button>findViewById(R.id.btn_hor);
+        mBtnHor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RecyclerViewActivity.this,HorRecyclerViewActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
 
 }

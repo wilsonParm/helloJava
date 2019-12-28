@@ -32,7 +32,7 @@ public class ListViewActivity extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(ListViewActivity.this,"长按 pos:"+position,Toast.LENGTH_SHORT).show();
-                return true;
+                return true;//有关长按事件这里需要设置为true，因为false的话放手时还会出发click事件
             }
         });
 
