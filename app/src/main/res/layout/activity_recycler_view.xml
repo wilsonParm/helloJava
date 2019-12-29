@@ -35,5 +35,16 @@
         android:background="@drawable/btn_n7"
         android:text="网格式图"
         />
+    />
+    <Button
+        android:id="@+id/btn_pu"
+        android:layout_below="@id/btn_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_red"
+        android:text="瀑布流"
+        />
 
 </RelativeLayout>
