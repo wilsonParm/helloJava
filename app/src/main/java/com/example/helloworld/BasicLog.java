@@ -27,7 +27,7 @@ public class BasicLog extends AppCompatActivity {
         mBtnBack.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View V){
-                Intent intent = new Intent(BasicLog.this, MainActivity.class);
+                Intent intent = new Intent(BasicLog.this, UIActivity.class);
                 startActivity(intent);
                     }
         });

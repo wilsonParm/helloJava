@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+
+        <Button
+            android:id="@+id/BtnToTextview"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:text="TextClass"/>
+        <Button
+            android:id="@+id/BtnToClass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="BtnClass" />
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="200dp"-->
+    <!--android:layout_height="100dp"-->
+    <!--android:orientation="vertical">-->
+    <!--</LinearLayout>-->
+
+
+    <Button
+        android:id="@+id/BtnToLogView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/btn_n7"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="Log"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:id="@+id/BtnToRadio"
+            android:background="@drawable/btn_n7"
+            android:text="Radio"
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_toRightOf="@id/BtnToRadio"
+            android:id="@+id/BtnToImage"
+            android:background="@drawable/btn_red"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:text="Radio"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:id="@+id/BtnToListview"
+            android:layout_toRightOf="@id/BtnToImage"
+            android:background="@drawable/btn_n7"
+            android:layout_weight="1"
+            android:text="listView"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:id="@+id/BtnToGridView"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_red"
+            android:text="GridView"
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:layout_toRightOf="@id/BtnToGridView"
+            android:id="@+id/btnToRecyclerView"
+            android:background="@drawable/btn_n7"
+            android:layout_marginTop="20dp"
+            android:text="recyclerView"
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:id="@+id/BtnToToast"
+            android:layout_toRightOf="@id/btnToRecyclerView"
+            android:background="@drawable/btn_red"
+            android:text="Toast"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:id="@+id/btnToDialog"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_red"
+            android:text="GridView"
+            android:layout_weight="1"/>
+        <!--        <Button-->
+        <!--            android:layout_width="110dp"-->
+        <!--            android:layout_height="80dp"-->
+        <!--            android:id="@+id/btnToRecyclerView"-->
+        <!--            android:background="@drawable/btn_n7"-->
+        <!--            android:layout_marginTop="20dp"-->
+        <!--            android:text="recyclerView"-->
+        <!--            android:layout_weight="1"/>-->
+        <!--        <Button-->
+        <!--            android:layout_width="110dp"-->
+        <!--            android:layout_height="80dp"-->
+        <!--            android:layout_margin="20dp"-->
+        <!--            android:id="@+id/BtnToToast"-->
+        <!--            android:background="@drawable/btn_red"-->
+        <!--            android:text="Toast"-->
+        <!--            android:layout_weight="1"/>-->
+    </LinearLayout>
+
+</LinearLayout>

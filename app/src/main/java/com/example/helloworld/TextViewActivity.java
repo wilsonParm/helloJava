@@ -14,8 +14,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.content.Intent;
 
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
-
 public class TextViewActivity extends AppCompatActivity {
 
     private TextView mTv4;
@@ -46,7 +44,7 @@ public class TextViewActivity extends AppCompatActivity {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TextViewActivity.this,MainActivity.class);
+                Intent intent = new Intent(TextViewActivity.this, UIActivity.class);
                 startActivity(intent);
             }
         });

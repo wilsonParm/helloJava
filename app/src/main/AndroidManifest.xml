@@ -18,7 +18,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ToastActivity"></activity>
+        <activity android:name=".UIActivity"></activity>
+        <activity
+            android:name=".DialogActivity"
+            android:label="@string/title_activity_dialog"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ToastActivity" />
         <activity android:name=".recyclerview.PuRecyclerViewActivity" />
         <activity android:name=".recyclerview.GridRecyclerViewActivity" />
         <activity android:name=".recyclerview.HorRecyclerViewActivity" />
