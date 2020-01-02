@@ -22,6 +22,7 @@ public class UIActivity extends AppCompatActivity {
     private Button mRv;
     private Button mRtnToast;
     private Button mRtnToDialog;
+    private Button mRtnToProgress;
 
 
     @Override
@@ -38,6 +39,7 @@ public class UIActivity extends AppCompatActivity {
         mRv = this.<Button>findViewById(R.id.btnToRecyclerView);
         mRtnToast = this.<Button>findViewById(R.id.BtnToToast);
         mRtnToDialog = this.<Button>findViewById(R.id.btnToDialog);
+        mRtnToProgress = this.<Button>findViewById(R.id.btnToProgress);
         setListeners();
     }
 
@@ -53,6 +55,7 @@ public class UIActivity extends AppCompatActivity {
         mRv.setOnClickListener(onclick);
         mRtnToast.setOnClickListener(onclick);
         mRtnToDialog.setOnClickListener(onclick);
+        mRtnToProgress.setOnClickListener(onclick);
     }
 
     private class Onclick implements View.OnClickListener{
@@ -90,6 +93,9 @@ public class UIActivity extends AppCompatActivity {
                     break;
                 case R.id.btnToDialog:
                     intent = new Intent(UIActivity.this, DialogActivity.class);
+                    break;
+                case R.id.btnToProgress:
+                    intent = new Intent(UIActivity.this, ProgressActivity.class);
                     break;
 
             }
