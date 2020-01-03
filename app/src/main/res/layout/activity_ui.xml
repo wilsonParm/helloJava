@@ -128,14 +128,44 @@
             android:layout_marginTop="20dp"
             android:text="recyclerView"
             android:layout_weight="1"/>
-        <!--        <Button-->
-        <!--            android:layout_width="110dp"-->
-        <!--            android:layout_height="80dp"-->
-        <!--            android:layout_margin="20dp"-->
-        <!--            android:id="@+id/BtnToToast"-->
-        <!--            android:background="@drawable/btn_red"-->
-        <!--            android:text="Toast"-->
-        <!--            android:layout_weight="1"/>-->
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:id="@+id/BtnToDialog2"
+            android:background="@drawable/btn_red"
+            android:text="Dialog2"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:id="@+id/btnToPopup"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_n7"
+            android:text="GridView"
+            android:layout_weight="1"/>
+<!--        <Button-->
+<!--            android:layout_width="110dp"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:id="@+id/btnToProgress"-->
+<!--            android:background="@drawable/btn_red"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:text="recyclerView"-->
+<!--            android:layout_weight="1"/>-->
+<!--        <Button-->
+<!--            android:layout_width="110dp"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:layout_margin="20dp"-->
+<!--            android:id="@+id/BtnToDialog2"-->
+<!--            android:background="@drawable/btn_red"-->
+<!--            android:text="Dialog2"-->
+<!--            android:layout_weight="1"/>-->
     </LinearLayout>
 
 </LinearLayout>

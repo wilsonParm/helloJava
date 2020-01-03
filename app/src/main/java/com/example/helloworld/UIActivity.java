@@ -10,6 +10,7 @@ import android.widget.Button;
 import com.example.helloworld.gridview.GridViewActivity;
 import com.example.helloworld.listView.ListViewActivity;
 import com.example.helloworld.recyclerview.RecyclerViewActivity;
+import com.example.helloworld.widget.CustomDialogActivity;
 
 public class UIActivity extends AppCompatActivity {
     private Button mBtnTextView;
@@ -23,6 +24,7 @@ public class UIActivity extends AppCompatActivity {
     private Button mRtnToast;
     private Button mRtnToDialog;
     private Button mRtnToProgress;
+    private Button mRtnToDialog2;
 
 
     @Override
@@ -40,6 +42,7 @@ public class UIActivity extends AppCompatActivity {
         mRtnToast = this.<Button>findViewById(R.id.BtnToToast);
         mRtnToDialog = this.<Button>findViewById(R.id.btnToDialog);
         mRtnToProgress = this.<Button>findViewById(R.id.btnToProgress);
+        mRtnToDialog2 = this.<Button>findViewById(R.id.BtnToDialog2);
         setListeners();
     }
 
@@ -56,6 +59,7 @@ public class UIActivity extends AppCompatActivity {
         mRtnToast.setOnClickListener(onclick);
         mRtnToDialog.setOnClickListener(onclick);
         mRtnToProgress.setOnClickListener(onclick);
+        mRtnToDialog2.setOnClickListener(onclick);
     }
 
     private class Onclick implements View.OnClickListener{
@@ -96,6 +100,9 @@ public class UIActivity extends AppCompatActivity {
                     break;
                 case R.id.btnToProgress:
                     intent = new Intent(UIActivity.this, ProgressActivity.class);
+                    break;
+                case R.id.BtnToDialog2:
+                    intent = new Intent(UIActivity.this, CustomDialogActivity.class);
                     break;
 
             }
