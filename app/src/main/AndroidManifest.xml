@@ -18,7 +18,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".widget.CustomDialogActivity"></activity>
+        <activity android:name=".PopupWindowActivity"></activity>
+        <activity android:name=".widget.CustomDialogActivity" />
         <activity android:name=".UIActivity" />
         <activity
             android:name=".DialogActivity"

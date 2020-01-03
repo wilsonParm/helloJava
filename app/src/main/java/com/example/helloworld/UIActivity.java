@@ -21,10 +21,11 @@ public class UIActivity extends AppCompatActivity {
     private Button mBtnListview;
     private Button mBtnGridView;
     private Button mRv;
-    private Button mRtnToast;
-    private Button mRtnToDialog;
-    private Button mRtnToProgress;
-    private Button mRtnToDialog2;
+    private Button mBtnToast;
+    private Button mBtnToDialog;
+    private Button mBtnToProgress;
+    private Button mBtnToDialog2;
+    private Button mBtnToPopup;
 
 
     @Override
@@ -39,10 +40,11 @@ public class UIActivity extends AppCompatActivity {
         mBtnListview = this.<Button>findViewById(R.id.BtnToListview);
         mBtnGridView = this.<Button>findViewById(R.id.BtnToGridView);
         mRv = this.<Button>findViewById(R.id.btnToRecyclerView);
-        mRtnToast = this.<Button>findViewById(R.id.BtnToToast);
-        mRtnToDialog = this.<Button>findViewById(R.id.btnToDialog);
-        mRtnToProgress = this.<Button>findViewById(R.id.btnToProgress);
-        mRtnToDialog2 = this.<Button>findViewById(R.id.BtnToDialog2);
+        mBtnToast = this.<Button>findViewById(R.id.BtnToToast);
+        mBtnToDialog = this.<Button>findViewById(R.id.btnToDialog);
+        mBtnToProgress = this.<Button>findViewById(R.id.btnToProgress);
+        mBtnToDialog2 = this.<Button>findViewById(R.id.BtnToDialog2);
+        mBtnToPopup = this.<Button>findViewById(R.id.btnToPopup);
         setListeners();
     }
 
@@ -56,10 +58,11 @@ public class UIActivity extends AppCompatActivity {
         mBtnListview.setOnClickListener(onclick);
         mBtnGridView.setOnClickListener(onclick);
         mRv.setOnClickListener(onclick);
-        mRtnToast.setOnClickListener(onclick);
-        mRtnToDialog.setOnClickListener(onclick);
-        mRtnToProgress.setOnClickListener(onclick);
-        mRtnToDialog2.setOnClickListener(onclick);
+        mBtnToast.setOnClickListener(onclick);
+        mBtnToDialog.setOnClickListener(onclick);
+        mBtnToProgress.setOnClickListener(onclick);
+        mBtnToDialog2.setOnClickListener(onclick);
+        mBtnToPopup.setOnClickListener(onclick);
     }
 
     private class Onclick implements View.OnClickListener{
@@ -103,6 +106,9 @@ public class UIActivity extends AppCompatActivity {
                     break;
                 case R.id.BtnToDialog2:
                     intent = new Intent(UIActivity.this, CustomDialogActivity.class);
+                    break;
+                case R.id.btnToPopup:
+                    intent = new Intent(UIActivity.this, PopupWindowActivity.class);
                     break;
 
             }
