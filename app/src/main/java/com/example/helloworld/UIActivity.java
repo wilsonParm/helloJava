@@ -3,9 +3,12 @@ package com.example.helloworld;
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.helloworld.gridview.GridViewActivity;
 import com.example.helloworld.listView.ListViewActivity;
@@ -26,6 +29,7 @@ public class UIActivity extends AppCompatActivity {
     private Button mBtnToProgress;
     private Button mBtnToDialog2;
     private Button mBtnToPopup;
+    private Button mBtnToLife;
 
 
     @Override
@@ -45,6 +49,7 @@ public class UIActivity extends AppCompatActivity {
         mBtnToProgress = this.<Button>findViewById(R.id.btnToProgress);
         mBtnToDialog2 = this.<Button>findViewById(R.id.BtnToDialog2);
         mBtnToPopup = this.<Button>findViewById(R.id.btnToPopup);
+        mBtnToLife = this.<Button>findViewById(R.id.btnToLife);
         setListeners();
     }
 
@@ -63,6 +68,7 @@ public class UIActivity extends AppCompatActivity {
         mBtnToProgress.setOnClickListener(onclick);
         mBtnToDialog2.setOnClickListener(onclick);
         mBtnToPopup.setOnClickListener(onclick);
+        mBtnToLife.setOnClickListener(onclick);
     }
 
     private class Onclick implements View.OnClickListener{
@@ -110,9 +116,27 @@ public class UIActivity extends AppCompatActivity {
                 case R.id.btnToPopup:
                     intent = new Intent(UIActivity.this, PopupWindowActivity.class);
                     break;
+                case R.id.btnToLife:
+                    intent = new Intent(UIActivity.this, LifeCycleActivity.class);
+                    break;
 
             }
             startActivity(intent);
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        // Checks the orientation of the screen
+        int orienonResumet=getRequestedOrientation();
+        if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            Toast.makeText(this, "landscape", Toast.LENGTH_SHORT).show();
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        } else{
+            Toast.makeText(this, "portrait", Toast.LENGTH_SHORT).show();
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
     }
 }

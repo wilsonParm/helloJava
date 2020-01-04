@@ -150,14 +150,15 @@
             android:background="@drawable/btn_n7"
             android:text="Popup"
             android:layout_weight="1"/>
-<!--        <Button-->
-<!--            android:layout_width="110dp"-->
-<!--            android:layout_height="80dp"-->
-<!--            android:id="@+id/btnToProgress"-->
-<!--            android:background="@drawable/btn_red"-->
-<!--            android:layout_marginTop="20dp"-->
-<!--            android:text="recyclerView"-->
-<!--            android:layout_weight="1"/>-->
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:id="@+id/btnToLife"
+            android:background="@drawable/btn_red"
+            android:layout_marginTop="20dp"
+            android:text="Life Cycle"
+            android:layout_weight="1"
+            android:textAllCaps="false"/>
 <!--        <Button-->
 <!--            android:layout_width="110dp"-->
 <!--            android:layout_height="80dp"-->
