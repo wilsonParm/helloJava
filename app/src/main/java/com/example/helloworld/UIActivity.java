@@ -11,25 +11,14 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.helloworld.gridview.GridViewActivity;
+import com.example.helloworld.jump.AActivity;
 import com.example.helloworld.listView.ListViewActivity;
 import com.example.helloworld.recyclerview.RecyclerViewActivity;
 import com.example.helloworld.widget.CustomDialogActivity;
 
 public class UIActivity extends AppCompatActivity {
-    private Button mBtnTextView;
-    private Button BtnClass;
-    private Button BtnLogView;
-    private Button BtnRadio;
-    private Button BtnImage;
-    private Button mBtnListview;
-    private Button mBtnGridView;
-    private Button mRv;
-    private Button mBtnToast;
-    private Button mBtnToDialog;
-    private Button mBtnToProgress;
-    private Button mBtnToDialog2;
-    private Button mBtnToPopup;
-    private Button mBtnToLife;
+    private Button mBtnTextView,BtnClass,BtnLogView,BtnRadio,BtnImage,mBtnListview,mBtnGridView,mRv,mBtnToast,mBtnToDialog;
+    private Button mBtnToProgress,mBtnToDialog2,mBtnToPopup,mBtnToLife,mBtnToJump;
 
 
     @Override
@@ -50,6 +39,7 @@ public class UIActivity extends AppCompatActivity {
         mBtnToDialog2 = this.<Button>findViewById(R.id.BtnToDialog2);
         mBtnToPopup = this.<Button>findViewById(R.id.btnToPopup);
         mBtnToLife = this.<Button>findViewById(R.id.btnToLife);
+        mBtnToJump = this.<Button>findViewById(R.id.BtnToJump);
         setListeners();
     }
 
@@ -69,6 +59,7 @@ public class UIActivity extends AppCompatActivity {
         mBtnToDialog2.setOnClickListener(onclick);
         mBtnToPopup.setOnClickListener(onclick);
         mBtnToLife.setOnClickListener(onclick);
+        mBtnToJump.setOnClickListener(onclick);
     }
 
     private class Onclick implements View.OnClickListener{
@@ -118,6 +109,9 @@ public class UIActivity extends AppCompatActivity {
                     break;
                 case R.id.btnToLife:
                     intent = new Intent(UIActivity.this, LifeCycleActivity.class);
+                    break;
+                case R.id.BtnToJump:
+                    intent = new Intent(UIActivity.this, AActivity.class);
                     break;
 
             }
