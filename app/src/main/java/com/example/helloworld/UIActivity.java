@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.helloworld.fragment.ContainerActivity;
 import com.example.helloworld.gridview.GridViewActivity;
 import com.example.helloworld.jump.AActivity;
 import com.example.helloworld.listView.ListViewActivity;
@@ -18,7 +19,7 @@ import com.example.helloworld.widget.CustomDialogActivity;
 
 public class UIActivity extends AppCompatActivity {
     private Button mBtnTextView,BtnClass,BtnLogView,BtnRadio,BtnImage,mBtnListview,mBtnGridView,mRv,mBtnToast,mBtnToDialog;
-    private Button mBtnToProgress,mBtnToDialog2,mBtnToPopup,mBtnToLife,mBtnToJump;
+    private Button mBtnToProgress,mBtnToDialog2,mBtnToPopup,mBtnToLife,mBtnToJump, mBtnToFragment;
 
 
     @Override
@@ -40,6 +41,7 @@ public class UIActivity extends AppCompatActivity {
         mBtnToPopup = this.<Button>findViewById(R.id.btnToPopup);
         mBtnToLife = this.<Button>findViewById(R.id.btnToLife);
         mBtnToJump = this.<Button>findViewById(R.id.BtnToJump);
+        mBtnToFragment = this.<Button>findViewById(R.id.BtnToFragment);
         setListeners();
     }
 
@@ -60,6 +62,7 @@ public class UIActivity extends AppCompatActivity {
         mBtnToPopup.setOnClickListener(onclick);
         mBtnToLife.setOnClickListener(onclick);
         mBtnToJump.setOnClickListener(onclick);
+        mBtnToFragment.setOnClickListener(onclick);
     }
 
     private class Onclick implements View.OnClickListener{
@@ -112,6 +115,9 @@ public class UIActivity extends AppCompatActivity {
                     break;
                 case R.id.BtnToJump:
                     intent = new Intent(UIActivity.this, AActivity.class);
+                    break;
+                case R.id.BtnToFragment:
+                    intent = new Intent(UIActivity.this, ContainerActivity.class);
                     break;
 
             }
