@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity"
     android:padding = "20dp">
 
@@ -12,6 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="UI"
-        android:background="@drawable/btn_n7"
-        />
+        android:background="@drawable/btn_n7"/>
+
+    <Button
+        android:id="@+id/btn_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="事件"
+        android:background="@drawable/btn_red"
+        android:layout_marginTop="15dp"/>
 </LinearLayout>
