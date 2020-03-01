@@ -5,6 +5,12 @@
     android:gravity="center">
 
     <Button
+        android:id="@+id/btn_msg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="给fragment传递消息"
+        android:textAllCaps="false"/>
+    <Button
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:id="@+id/btn_change"

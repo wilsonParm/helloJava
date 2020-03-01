@@ -9,19 +9,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
 import com.example.helloworld.R;
 
 public class AFragment extends Fragment {
 
     private TextView mtvTitle;
     private Activity mActivity;
-    private Button mBtnChange, mBtnReset;
+    private Button mBtnChange, mBtnReset,mBtnMsg;
     private BFragment bFragment;
+    private IOnMessageClick listener;
 
     public static AFragment newInstance(String title){
         AFragment fragment = new AFragment();
@@ -29,6 +28,20 @@ public class AFragment extends Fragment {
         bundle.putString("title", title);//将title的内容传到key = title中
         fragment.setArguments(bundle);//*****即便被回收  也会赋值，重要
         return fragment;
+    }
+
+    public interface IOnMessageClick{
+        void onclick(String text);
+    }
+
+    public void onAttach(Context context){
+        Log.v("onAttch","asdaskdasdasdasd");
+        super.onAttach(context);
+        try {
+            listener = (IOnMessageClick) context;
+        }catch (ClassCastException e){
+            throw new ClassCastException("Activity必须实现IOnMessageClick接口");
+        }
     }
 
     @Nullable
@@ -45,6 +58,14 @@ public class AFragment extends Fragment {
         mtvTitle = (TextView) view.findViewById(R.id.tv_title);
         mBtnChange = (Button) view.findViewById(R.id.btn_change);
         mBtnReset = view.<Button>findViewById(R.id.btn_reset);
+        mBtnMsg = view.findViewById(R.id.btn_msg);
+        mBtnMsg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                ((ContainerActivity)getActivity()).setData("你好");
+                listener.onclick("你好");
+            }
+        });
         mBtnChange.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -76,12 +97,6 @@ public class AFragment extends Fragment {
         }else{
 
         }
-    }
-
-    @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-        mActivity = (Activity) context;//不推荐  可能会内存泄露
     }
 
     @Override
