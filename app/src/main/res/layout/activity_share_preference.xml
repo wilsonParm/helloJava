@@ -5,29 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:padding = "20dp">
+    tools:context=".dataStorage.SharePreferenceActivity">
 
-    <Button
-        android:id="@+id/btn_ui"
+    <EditText
+        android:id="@+id/et_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="UI"
-        android:background="@drawable/btn_n7"/>
+        android:hint="输入内容"/>
 
     <Button
-        android:id="@+id/btn_event"
+        android:id="@+id/btn_save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="事件"
-        android:background="@drawable/btn_red"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="10dp"
+        android:text="保存"/>
 
     <Button
-        android:id="@+id/btn_data"
+        android:id="@+id/btn_show"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Data"
-        android:background="@drawable/btn_n7"/>
+        android:layout_marginTop="10dp"
+        android:text="显示"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"/>
+
 </LinearLayout>
