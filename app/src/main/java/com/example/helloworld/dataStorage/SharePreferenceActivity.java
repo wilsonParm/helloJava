@@ -11,6 +11,11 @@ import android.widget.TextView;
 
 import com.example.helloworld.R;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 public class SharePreferenceActivity extends AppCompatActivity {
 
     private EditText mEtName;
@@ -18,6 +23,8 @@ public class SharePreferenceActivity extends AppCompatActivity {
     private TextView mTvContent;
     private SharedPreferences mSharedPreference;
     private SharedPreferences.Editor mEditor;
+    private final String mFileName = "test.txt";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,15 +41,62 @@ public class SharePreferenceActivity extends AppCompatActivity {
         mbtnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                 mEditor.putString("name", mEtName.getText().toString());//将String数据放进去
-                 mEditor.apply();//commit后才生效
+                save(mEtName.getText().toString());
             }
         });
         mBtnShow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mTvContent.setText(mSharedPreference.getString("name", ""));
+                mTvContent.setText(read());
             }
         });
+    }
+
+    //存储数据  存储到mFileName中
+    private void save(String content){
+        FileOutputStream fileOutputStream = null;
+        try {
+            fileOutputStream = openFileOutput(mFileName, MODE_PRIVATE);
+            fileOutputStream.write(content.getBytes());
+            fileOutputStream.close();//一定要再关闭掉
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            if (fileOutputStream != null) {
+                try {
+                    fileOutputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+//        catch (FileNotFoundException e) {由于FileNotFoundException是IOException的子类，没必要catch了父类后再catch子类了
+//            e.printStackTrace();
+//        }
+    }
+
+    private String read(){
+        FileInputStream fileInputStream = null;
+        try {
+            fileInputStream = openFileInput(mFileName);
+            byte[] buff = new byte[1024];
+            StringBuilder sb = new StringBuilder("");//字符串拼接，不直接string相加是因为性能问题，StringBUilder不会重复创建新的字符串对象
+            int len = 0;
+            while((len = fileInputStream.read(buff))>0){
+                sb.append(new String(buff, 0, len));
+            }
+            return sb.toString()
+;        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            if(fileInputStream != null){
+                try {
+                    fileInputStream.close();
+                }catch (IOException e){
+                    e.printStackTrace();
+                }
+            }
+        }
+        return null;
     }
 }

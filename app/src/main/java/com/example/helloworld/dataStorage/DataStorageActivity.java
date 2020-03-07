@@ -13,7 +13,7 @@ import com.example.helloworld.util.ToastUtil;
 
 public class DataStorageActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private Button mBtnSharePreference;
+    private Button mBtnSharePreference,mBtnFile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,18 +22,20 @@ public class DataStorageActivity extends AppCompatActivity implements View.OnCli
 
         mBtnSharePreference = this.<Button>findViewById(R.id.btn_sharePreference);
         mBtnSharePreference.setOnClickListener(this);
+        mBtnFile = findViewById(R.id.btn_file);
+        mBtnFile.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View view) {
-        ToastUtil.showMsg(this, "click");
-        Log.v("asd","onclick");
         Intent intent = null;
         switch (view.getId()){
             case R.id.btn_sharePreference:
-                ToastUtil.showMsg(this, "click");
                 intent = new Intent(DataStorageActivity.this, SharePreferenceActivity.class);
+                break;
+            case R.id.btn_file:
+                intent = new Intent(DataStorageActivity.this, FileActivity.class);
                 break;
         }
         startActivity(intent);

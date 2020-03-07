@@ -20,6 +20,7 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".dataStorage.SharePreferenceActivity"></activity>
         <activity android:name=".dataStorage.DataStorageActivity" />
+        <activity android:name=".dataStorage.FileActivity" />
         <activity android:name=".HandleActivity" />
         <activity android:name=".EventActivity" />
         <activity android:name=".fragment.ContainerActivity" />
