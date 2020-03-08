@@ -1,7 +1,9 @@
 package com.example.helloworld.dataStorage;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Environment;
@@ -51,15 +53,18 @@ public class FileActivity extends AppCompatActivity {
                 mTvContent.setText(read());
             }
         });
+
+        //↓2：申请允许写入SD卡，使用的时候还有manifest里面有个permission.WRITE_EXTERNAL_STORAGE也要加上
+        ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
     }
 
     //存储数据  存储到mFileName中
     private void save(String content){
         FileOutputStream fileOutputStream = null;
         try {
-//            fileOutputStream = openFileOutput(mFileName, MODE_PRIVATE);//内部存储
+//            fileOutputStream = openFileOutput(mFileName, MODE_PRIVATE);//1：内部存储
 
-            {//sd卡存储
+            {//2：sd卡存储
                 File dir = new File(Environment.getExternalStorageDirectory(),"skypan");
                 if(!dir.exists()){
                     dir.mkdir();//新建文件夹
@@ -68,10 +73,10 @@ public class FileActivity extends AppCompatActivity {
                 if(!file.exists()){
                     file.createNewFile();//新建文件
                 }
-                fileOutputStream = new FileOutputStream();
+                fileOutputStream = new FileOutputStream(file);
             }
             fileOutputStream.write(content.getBytes());
-            fileOutputStream.close();//一定要再关闭掉
+//            fileOutputStream.close();//1：一定要再关闭掉
         } catch (IOException e) {
             e.printStackTrace();
         }finally {
@@ -91,9 +96,9 @@ public class FileActivity extends AppCompatActivity {
     private String read(){
         FileInputStream fileInputStream = null;
         try {
-            fileInputStream = openFileInput(mFileName);//内部读取
+//            fileInputStream = openFileInput(mFileName);//1：内部读取
 
-            {//sd外部读取
+            {//2：sd外部读取
                 File file = new File(Environment.getExternalStorageDirectory().getAbsoluteFile()+ File.separator+"skypan", mFileName);
                 fileInputStream = new FileInputStream(file);
             }
