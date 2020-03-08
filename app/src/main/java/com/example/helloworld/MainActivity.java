@@ -9,11 +9,12 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.helloworld.Broad.BroadActivity;
+import com.example.helloworld.animation.ObjectAnimActivity;
 import com.example.helloworld.dataStorage.DataStorageActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button mBtnUI,mBtnEvent,mBtndata,mBtnBroad;
+    private Button mBtnUI,mBtnEvent,mBtndata,mBtnBroad,mAnim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         mBtndata.setOnClickListener(onClick);
         mBtnBroad = findViewById(R.id.btn_broad);
         mBtnBroad.setOnClickListener(onClick);
+        mAnim = findViewById(R.id.btn_anima);
+        mAnim.setOnClickListener(onClick);
     }
 
     class OnClick implements View.OnClickListener{
@@ -48,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_broad:
                     intent = new Intent(MainActivity.this, BroadActivity.class);
+                    break;
+                case R.id.btn_anima:
+                    intent = new Intent(MainActivity.this, ObjectAnimActivity.class);
                     break;
             }
             startActivity(intent);

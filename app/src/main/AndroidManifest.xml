@@ -19,7 +19,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Broad.BroadActivity_2"></activity>
+        <activity android:name=".animation.ObjectAnimActivity"></activity>
+        <activity android:name=".Broad.BroadActivity_2" />
         <activity android:name=".Broad.BroadActivity" />
         <activity android:name=".dataStorage.FileActivity" />
         <activity android:name=".dataStorage.DataStorageActivity" />
