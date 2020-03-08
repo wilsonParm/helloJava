@@ -8,11 +8,12 @@ import android.service.autofill.Dataset;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.helloworld.Broad.BroadActivity;
 import com.example.helloworld.dataStorage.DataStorageActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button mBtnUI,mBtnEvent,mBtndata;
+    private Button mBtnUI,mBtnEvent,mBtndata,mBtnBroad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
         mBtndata = this.<Button>findViewById(R.id.btn_data);
         mBtndata.setOnClickListener(onClick);
+        mBtnBroad = findViewById(R.id.btn_broad);
+        mBtnBroad.setOnClickListener(onClick);
     }
 
     class OnClick implements View.OnClickListener{
@@ -42,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_data:
                     intent = new Intent(MainActivity.this, DataStorageActivity.class);
+                    break;
+                case R.id.btn_broad:
+                    intent = new Intent(MainActivity.this, BroadActivity.class);
                     break;
             }
             startActivity(intent);
