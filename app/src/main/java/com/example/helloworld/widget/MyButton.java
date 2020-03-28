@@ -24,13 +24,18 @@ public class MyButton extends AppCompatButton {
     }
 
     @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        //入口方法,最先执行的，按下抬起都会执行
+        return super.dispatchTouchEvent(event);
+    }
+
+    @Override
     public boolean onTouchEvent(MotionEvent event) {
-        super.onTouchEvent(event);
         switch (event.getAction()){
-            case MotionEvent.ACTION_DOWN://手指刚刚按下
+            case MotionEvent.ACTION_DOWN://手指刚刚按下，touchEvent产生了click事件
                 Log.v("MyButton", "onTouchEvent");
                 break;
         }
-        return false;//false：点击事件被listener到了之后回true这次的click就结束了，往后就不回调Ontouch了，若是false的话后面还能回调到OnTouch
+        return super.onTouchEvent(event);//false：点击事件被listener到了之后回true这次的click就结束了，往后就不回调Ontouch了，若是false的话后面还能回调到OnTouch
     }
 }

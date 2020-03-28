@@ -35,6 +35,12 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
                 return false;
             }
         });
+        btnMy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("click listener","---onclick---");
+            }
+        });
 
         //所有监听都打开的话，实际是覆盖操作，最后一个有效
         //layout的onClick是跟着布局最先设置的所以第一个被覆盖

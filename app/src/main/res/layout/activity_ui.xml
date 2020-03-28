@@ -129,7 +129,7 @@
                 android:id="@+id/btnToDialog"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/btn_n7"
-                android:text="GridView"
+                android:text="Dialog"
                 android:layout_weight="1"/>
             <Button
                 android:layout_width="110dp"
