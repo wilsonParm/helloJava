@@ -3,6 +3,7 @@ package com.example.helloworld;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -14,7 +15,7 @@ import com.example.helloworld.widget.MyButton;
 
 public class EventActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button mBtnEvent;
+    private Button mBtnEvent,mBtnHandler;
     private MyButton btnMy;//new了一个MyButton这个class的方法，下面再进行绑定
 
     @SuppressLint("ClickableViewAccessibility")
@@ -35,10 +36,12 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
                 return false;
             }
         });
-        btnMy.setOnClickListener(new View.OnClickListener() {
+        mBtnHandler = findViewById(R.id.btn_handler);
+        mBtnHandler.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Log.d("click listener","---onclick---");
+            public void onClick(View view) {
+                Intent intent = new Intent(EventActivity.this, HandleActivity.class);
+                startActivity(intent);
             }
         });
 
